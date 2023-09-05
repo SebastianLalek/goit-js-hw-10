@@ -44,7 +44,8 @@ selector.addEventListener('input', e => {
     .then(response => response.data[0].breeds[0])
     .then(data => {
       const markup = `<div><h1>${data.name}</h1>
-      <p>${data.description}</p></div>`;
+      <p>${data.description}</p>
+      <p><span>Temperament: </span>${data.temperament}</p></div>`;
       info.insertAdjacentHTML('beforeend', markup);
     })
     .catch(err => {
