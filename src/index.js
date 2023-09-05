@@ -26,7 +26,7 @@ function renderSelectOptions() {
       showElement(selector);
       hideElement(loader);
     })
-    .catch(err => {
+    .catch(() => {
       hideElement(selector);
       hideElement(loader);
       showElement(error);
@@ -48,7 +48,7 @@ selector.addEventListener('input', e => {
       <p><span>Temperament: </span>${data.temperament}</p></div>`;
       info.insertAdjacentHTML('beforeend', markup);
     })
-    .catch(err => {
+    .catch(() => {
       hideElement(selector);
       hideElement(loader);
       showElement(error);
@@ -67,7 +67,7 @@ selector.addEventListener('input', e => {
       showElement(info);
       hideElement(loader);
     })
-    .catch(err => {
+    .catch(() => {
       hideElement(selector);
       hideElement(loader);
       showElement(error);
